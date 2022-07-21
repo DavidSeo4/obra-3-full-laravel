@@ -26,7 +26,9 @@
                             aria-current="true">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" aria-current="true">Axenda</a>
+                        <a href="{{ route('calendar.index') }}"
+                        class="nav-link {{ request()->is('calendar') ? 'active btn btn-outline-light' : '' }}"
+                           aria-current="true">Axenda</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('persoas.index') }}"

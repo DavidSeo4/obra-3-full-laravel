@@ -63,3 +63,8 @@ Route::get('/empresas/{id}/show',  [EmpresasController::class, 'show'])->name('e
 // ELIMINAR UN REGISTRO - NO TIENE VISTA
 Route::delete('/empresas/{id}' ,[EmpresasController::class, 'destroy'])->name('empresas.destroy');
 
+// AXENDA
+Route::get('calendar', [EventController::class, 'index'])->name('calendar.index');
+Route::post('calendar/create-event', [EventController::class, 'create'])->name('calendar.create');
+Route::patch('calendar/edit-event', [EventController::class, 'edit'])->name('calendar.edit');
+Route::delete('calendar/remove-event', [EventController::class, 'destroy'])->name('calendar.destroy');
